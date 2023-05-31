@@ -76,6 +76,7 @@ app.get("/getMovies", async (req, res) => {
 
 app.post("/delete", async (req, res) => {
     const deleteMovie = await Movie.findByIdAndDelete(req.body.id) 
+    res.send("Movie deleted")
 });
 
 app.get("/", (req, res) => {
